@@ -1,0 +1,63 @@
+/* Reset general */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilo general del cuerpo */
+body {
+  background-image: url("../imgs/fondo.jpg");
+  background-position: bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  padding: 100px;
+}
+
+/* Estilo para el contenedor del preview */
+#preview {
+  height: 200px;
+  background-image: url(../imgs/lion.svg);
+  background-position: top;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+/* Estilo para el contenedor de los animales */
+#Animales {
+  height: 100%;
+  background: #f0f0f0;
+  display: flex;
+  flex-wrap: wrap;
+  
+  /* Espacio entre tarjetas */
+}
+
+/* Estilo para las tarjetas de animales */
+.animal-card {
+  width: 200px; /* Ancho fijo para todas las tarjetas */
+  height: 300px; /* Alto fijo para todas las tarjetas */
+  background: #fff; /* Fondo blanco para tarjetas */
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2); /* Sombra suave */
+  border-radius: 8px; /* Bordes redondeados */
+  overflow: hidden; /* Oculta desbordamiento de contenido */
+  text-align: center;
+  
+}
+
+/* Estilo para las imágenes dentro de las tarjetas */
+.animal-card img {
+  width: 100%; /* Ancho de la imagen igual al de la tarjeta */
+  height: 150px; /* Alto fijo para todas las imágenes */
+  object-fit: cover; /* Ajusta la imagen para cubrir el área sin deformarse */
+}
+
+/* Efecto hover para las tarjetas */
+.animal-card:hover {
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.4);
+}
+
+/* Modal */
+.modal-dialog {
+  max-width: 85% !important;
+}
