@@ -1,17 +1,15 @@
 import { Animal, Leon, Lobo, Oso, Serpiente, Aguila } from './animal.js';
 import { obtenerImagen } from './obtenerImagen.js';
 
-(async function() {
-  const animalesDisponibles = ['Leon', 'Lobo', 'Oso', 'Serpiente', 'Aguila'];
-  const animalSelect = document.getElementById('animal');
-  
-  animalesDisponibles.forEach(animal => {
-    const option = document.createElement('option');
-    option.value = animal;
-    option.textContent = animal.charAt(0).toUpperCase() + animal.slice(1);
-    animalSelect.appendChild(option);
-  });
-})();
+
+document.getElementById('animal').addEventListener('change', async (e) => {
+  const imagen = await obtenerImagen(e.target.value);
+  const preview = document.getElementById('preview')
+  preview.innerHTML = `<img src="${imagen}"  class="img-fluid mb-2 h-100 w-100 " style="object-fit: cover; object-position: top;" />`
+  console.log(imagen);
+
+});
+
 
 document.getElementById('btnRegistrar').addEventListener('click', async () => {
   const nombre = document.getElementById('animal').value;
@@ -63,3 +61,7 @@ function mostrarAnimal(animal) {
   `;
   animalesDiv.appendChild(animalDiv);
 }
+
+
+
+

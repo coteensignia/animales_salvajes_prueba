@@ -3,11 +3,11 @@ export async function obtenerImagen(nombre) {
   // Aquí deberías implementar la lógica para obtener la URL de la imagen
   // Por ejemplo, puedes usar un objeto de mapeo o hacer una solicitud a un servidor
   const imagenes = {
-    Leon: 'assets/imgs/Leon.jpg',
+    Leon: 'assets/imgs/Leon.png',
     Lobo: 'assets/imgs/Lobo.jpg',
     Oso: 'assets/imgs/Oso.jpg',
     Serpiente: 'assets/imgs/Serpiente.jpg',
-    Aguila: 'assets/imgs/Aguila.jpg'
+    Aguila: 'assets/imgs/Aguila.png'
   };
   return imagenes[nombre] || 'assets/imgs/default.jpg'; // Imagen por defecto si no se encuentra
 }
